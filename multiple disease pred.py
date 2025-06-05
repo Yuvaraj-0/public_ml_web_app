@@ -27,11 +27,11 @@ parkinsons_model = pickle.load(open(parkinsons_path, 'rb'))
 # Sidebar for navigation
 with st.sidebar:
     selected = option_menu(
-        menu_title='Multiple Disease Prediction System',
-        options=['Diabetes Prediction', 'Heart Disease Prediction', 'Parkinson Prediction'],
-        default_index=0)
+    menu_title='Multiple Disease Prediction System',
+    options=['Diabetes Prediction', 'Heart Disease Prediction', 'Parkinson Prediction'],
+    default_index=0)
 
-if (selected == 'Diabetes Prediction'):
+if selected == 'Diabetes Prediction':
     st.title('Diabetes predcition suing ML')
     Pregnancies = st.number_input('Pregnancies', min_value=0, max_value=20, step=1)
     Glucose = st.number_input('Glucose', min_value=0, max_value=300)
